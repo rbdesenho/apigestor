@@ -23,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
 @Table(name="usuario")
-@SequenceGenerator(name="usuario_sequence", sequenceName="usu_seq", allocationSize=1)
+@SequenceGenerator(name="usuario_sequence", sequenceName="usuario_seq", allocationSize=1)
 public class Usuario implements Serializable{
 	
 	private static final long serialVersionUID = 1L;

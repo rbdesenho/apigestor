@@ -20,7 +20,7 @@ import org.hibernate.annotations.OnDeleteAction;
 
 @Entity
 @Table(name="permissao_usuario")
-@SequenceGenerator(name="permissao_usuario_sequence", sequenceName="per_usu_seq", allocationSize=1)
+@SequenceGenerator(name="permissao_usuario_sequence", sequenceName="permissao_usuario_seq", allocationSize=1)
 public class PermissaoUsuario implements Serializable{
 	
 	private static final long serialVersionUID = 1L;

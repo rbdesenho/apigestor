@@ -13,7 +13,7 @@ import javax.validation.constraints.NotNull;
 
 @Entity
 @Table(name="raca_cor")
-@SequenceGenerator(name="raca_cor_sequence", sequenceName="rac_cor_seq", allocationSize=1)
+@SequenceGenerator(name="raca_cor_sequence", sequenceName="raca_cor_seq", allocationSize=1)
 public class RacaCor implements Serializable{
 	
 	private static final long serialVersionUID = 1L;

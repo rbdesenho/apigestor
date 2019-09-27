@@ -13,7 +13,7 @@ import javax.validation.constraints.NotNull;
 
 @Entity
 @Table(name="estado_civil")
-@SequenceGenerator(name="estado_civil_sequence", sequenceName="est_civ_seq", allocationSize=1)
+@SequenceGenerator(name="estado_civil_sequence", sequenceName="estado_civil_seq", allocationSize=1)
 public class EstadoCivil implements Serializable{
 	
 	private static final long serialVersionUID = 1L;

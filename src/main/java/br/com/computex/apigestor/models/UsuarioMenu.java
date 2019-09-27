@@ -15,14 +15,14 @@ import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
 @Entity
-@Table(name="TB_USUARIOMENU")
-@SequenceGenerator(name="usuariomenu_sequence", sequenceName="usumen_seq", allocationSize=1)
+@Table(name="usuario_menu")
+@SequenceGenerator(name="usuario_menu_sequence", sequenceName="usuario_menu_seq", allocationSize=1)
 public class UsuarioMenu implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	@Id
 //	@GeneratedValue(strategy=GenerationType.AUTO)
-	@GeneratedValue(strategy=GenerationType.AUTO, generator="usuariomenu_sequence")
+	@GeneratedValue(strategy=GenerationType.AUTO, generator="usuario_menu_sequence")
 	private long id;
 	
 	@ManyToOne

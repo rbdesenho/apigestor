@@ -10,8 +10,8 @@ import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="TB_MENU")
-@SequenceGenerator(name="menu_sequence", sequenceName="men_seq", allocationSize=1)
+@Table(name="menu")
+@SequenceGenerator(name="menu_sequence", sequenceName="menu_seq", allocationSize=1)
 
 public class Menu implements Serializable{
 	
