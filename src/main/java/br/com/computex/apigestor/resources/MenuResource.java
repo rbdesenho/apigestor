@@ -22,15 +22,12 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 
-import br.com.computex.menu.apirestmenu.models.Menu;
+import br.com.computex.apigestor.models.Menu;
 
-import br.com.computex.menu.apirestmenu.repository.MenuRepository;
-import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiOperation;
+import br.com.computex.apigestor.repository.MenuRepository;
 
 @RestController
 @RequestMapping(value="/api")
-@Api(value="API REST Menus")
 @CrossOrigin(origins="*")
 
 public class MenuResource {
@@ -38,31 +35,26 @@ public class MenuResource {
 	@Autowired
 	MenuRepository menuRepository;
 	
-	@ApiOperation(value="Retorna uma lista de menus")
 	@GetMapping("/menus")
 	public List<Menu> listaMenus() {
 		return menuRepository.findAll();
 	}
 	
-	@ApiOperation(value="Retorna um iten do menu")
 	@GetMapping("/menu/{id}")
 	public Menu listaMenuUnico(@PathVariable(value="id") long id){
 		return menuRepository.findById(id);
 	}
 	
-	@ApiOperation(value="Salva um item do menu")
 	@PostMapping("/menu")
 	public Menu salvaMenu(@RequestBody Menu menu) {
 		return menuRepository.save(menu);
 	}
 	
-	@ApiOperation(value="Deleta um item do menu")
 	@DeleteMapping("/menu")
 	public void deletaMenu(@RequestBody Menu menu) {
 		menuRepository.delete(menu);
 	}
 	
-	@ApiOperation(value="Atualiza um item do menu")
 	@PutMapping("/menu")
 	public Menu atualizaMenu(@RequestBody Menu menu) {
 		return menuRepository.save(menu);
