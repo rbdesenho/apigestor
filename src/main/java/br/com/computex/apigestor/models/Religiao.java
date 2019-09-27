@@ -12,14 +12,14 @@ import javax.validation.constraints.NotNull;
 
 
 @Entity
-@Table(name="setor")
-@SequenceGenerator(name="setor_sequence", sequenceName="set_seq", allocationSize=1)
-public class Setor implements Serializable{
+@Table(name="religiao")
+@SequenceGenerator(name="religiao_sequence", sequenceName="rel_seq", allocationSize=1)
+public class Religiao implements Serializable{
 	
 	private static final long serialVersionUID = 1L;
 	
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO, generator="setor_sequence")
+	@GeneratedValue(strategy=GenerationType.AUTO, generator="religiao_sequence")
 	private long id;
 	
 	@NotNull
